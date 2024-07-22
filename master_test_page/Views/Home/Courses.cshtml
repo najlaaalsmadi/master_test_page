@@ -1,0 +1,110 @@
+﻿
+@{
+    ViewBag.Title = "All Courses";
+}
+
+
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-3">
+                <h3>Categories</h3>
+                <ul class="list-group mb-4">
+                    <li class="list-group-item"><input type="checkbox" /> Handmade Art</li>
+                    <li class="list-group-item"><input type="checkbox" /> Woodwork</li>
+                    <li class="list-group-item"><input type="checkbox" /> Fashion</li>
+                    <li class="list-group-item"><input type="checkbox" /> Jewelry & Beading</li>
+                    <li class="list-group-item"><input type="checkbox" /> Beauty & Makeup</li>
+                </ul>
+
+                <h3>Language</h3>
+                <ul class="list-group mb-4">
+                    <li class="list-group-item"><input type="checkbox" /> English</li>
+                    <li class="list-group-item"><input type="checkbox" /> Spanish</li>
+                    <li class="list-group-item"><input type="checkbox" /> French</li>
+                </ul>
+
+                <h3>Price</h3>
+                <ul class="list-group mb-4">
+                    <li class="list-group-item"><input type="checkbox" /> All Prices</li>
+                    <li class="list-group-item"><input type="checkbox" /> Free</li>
+                    <li class="list-group-item"><input type="checkbox" /> Paid</li>
+                </ul>
+
+                <h3>Skill Level</h3>
+                <ul class="list-group mb-4">
+                    <li class="list-group-item"><input type="checkbox" /> Beginner</li>
+                    <li class="list-group-item"><input type="checkbox" /> Intermediate</li>
+                    <li class="list-group-item"><input type="checkbox" /> Advanced</li>
+                </ul>
+
+                <h3>Instructors</h3>
+                <ul class="list-group mb-4">
+                    <li class="list-group-item"><input type="checkbox" /> David Miller</li>
+                    <li class="list-group-item"><input type="checkbox" /> Jane Brown</li>
+                    <li class="list-group-item"><input type="checkbox" /> Amy Johnson</li>
+                </ul>
+
+                <h3>Ratings</h3>
+                <ul class="list-group mb-4">
+                    <li class="list-group-item"><input type="checkbox" /> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> (42)</li>
+                    <li class="list-group-item"><input type="checkbox" /> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i> (32)</li>
+                    <li class="list-group-item"><input type="checkbox" /> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> (27)</li>
+                </ul>
+            </div>
+
+            <div class="col-md-9">
+                <h1>All Courses</h1>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item active">Courses</li>
+                </ol>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <p>Showing 1-12 of 132 total results</p>
+                    <div>
+                        <label for="sort" class="mr-2">Sort by:</label>
+                        <select id="sort" class="form-control d-inline-block w-auto">
+                            <option>Most Popular</option>
+                            <option>Newest</option>
+                            <option>Lowest Price</option>
+                            <option>Highest Price</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Example of a course card -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="path/to/image.jpg" class="card-img-top" alt="Course Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Course Title</h5>
+                                <p class="card-text">Instructor Name</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-muted">$99.00</span>
+                                    <a href="#" class="btn btn-primary">Enroll Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Repeat for other courses -->
+                </div>
+
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

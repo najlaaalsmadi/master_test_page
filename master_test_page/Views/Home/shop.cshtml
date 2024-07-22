@@ -1,0 +1,153 @@
+﻿
+@{
+    ViewBag.Title = "Shop Page";
+}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<div class="row">
+    <aside class="col-md-3 mb-4">
+        <div class="card mb-4">
+            <div class="card-header">Categories</div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><input type="checkbox"> All</li>
+                <li class="list-group-item"><input type="checkbox"> Beads (10)</li>
+                <li class="list-group-item"><input type="checkbox"> Fabric & Sewing (10)</li>
+                <li class="list-group-item"><input type="checkbox"> Knitting & Crochet (10)</li>
+                <li class="list-group-item"><input type="checkbox"> Needlecrafts (10)</li>
+                <li class="list-group-item"><input type="checkbox"> Paper Crafts (10)</li>
+            </ul>
+        </div>
+        <div class="card mb-4">
+            <div class="card-header">Language</div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><input type="checkbox"> Spanish (10)</li>
+                <li class="list-group-item"><input type="checkbox"> English (10)</li>
+            </ul>
+        </div>
+        <div class="card mb-4">
+            <div class="card-header">Price</div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><input type="radio" name="price"> Under $10</li>
+                <li class="list-group-item"><input type="radio" name="price"> $10 - $50</li>
+            </ul>
+        </div>
+        <div class="card">
+            <div class="card-header">Ratings</div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><input type="checkbox"> <span>⭐⭐⭐⭐⭐</span> (3)</li>
+                <li class="list-group-item"><input type="checkbox"> <span>⭐⭐⭐⭐</span> (2)</li>
+                <li class="list-group-item"><input type="checkbox"> <span>⭐⭐⭐</span> (2)</li>
+                <li class="list-group-item"><input type="checkbox"> <span>⭐⭐</span> (1)</li>
+                <li class="list-group-item"><input type="checkbox"> <span>⭐</span> (1)</li>
+            </ul>
+        </div>
+    </aside>
+    <section class="col-md-9">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="~/images/crystal_beads.jpg" class="card-img-top" alt="Crystal Beads">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Crystal Beads</h5>
+                        <p class="card-text">$5.00 - $20.00</p>
+                        <p class="card-text">⭐⭐⭐⭐⭐</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="~/images/copper_wire.jpg" class="card-img-top" alt="Copper Wire">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Copper Wire</h5>
+                        <p class="card-text">$15.00</p>
+                        <p class="card-text">⭐⭐⭐⭐</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="~/images/knitting_machine.jpg" class="card-img-top" alt="Knitting Machine">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Knitting Machine</h5>
+                        <p class="card-text">$150.00</p>
+                        <p class="card-text">⭐⭐⭐⭐⭐</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="~/images/ribbons.jpg" class="card-img-top" alt="Ribbons, measuring tape, and scissors">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Ribbons, measuring tape, and scissors</h5>
+                        <p class="card-text">$20.00</p>
+                        <p class="card-text">⭐⭐⭐⭐</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="~/images/mens_teddy.jpg" class="card-img-top" alt="Men's Teddy">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Men's Teddy</h5>
+                        <p class="card-text">$40.00</p>
+                        <p class="card-text">⭐⭐⭐</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="~/images/fashion_design.jpg" class="card-img-top" alt="Fashion Design">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Fashion Design</h5>
+                        <p class="card-text">$30.00</p>
+                        <p class="card-text">⭐⭐⭐</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="~/images/washi_tape.jpg" class="card-img-top" alt="Washi Crafting Tape">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Washi Crafting Tape</h5>
+                        <p class="card-text">$12.00</p>
+                        <p class="card-text">⭐⭐</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="~/images/soap_colorants.jpg" class="card-img-top" alt="Soap Making Colorants">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Soap Making Colorants</h5>
+                        <p class="card-text">$25.00</p>
+                        <p class="card-text">⭐⭐⭐⭐⭐</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="~/images/jewelry_findings.jpg" class="card-img-top" alt="Making Jewelry Findings">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Making Jewelry Findings</h5>
+                        <p class="card-text">$35.00</p>
+                        <p class="card-text">⭐</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">&laquo;</a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">&raquo;</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+</div>

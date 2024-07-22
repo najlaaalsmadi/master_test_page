@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Ideamedia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-jLKHWMZ3MSNSeYH0GII2EmYoJYDW3rY8iZgEwXUpm88nN4A2I5P8eA9Zw1Z7RLD/" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .top-bar {
+            background-color: #1a1a1a;
+            color: #f2f2f2;
+            padding: 5px 0;
+        }
+
+            .top-bar a {
+                color: #f2f2f2;
+                text-decoration: none;
+            }
+
+        .navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #1a1a1a;
+        }
+
+        .navbar-brand {
+            color: #ffa500 !important;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link {
+            color: #000 !important;
+        }
+
+            .navbar-nav .nav-link:hover {
+                color: #ffa500 !important;
+            }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+            .search-bar input {
+                margin-left: 10px;
+                flex: 1;
+            }
+
+        .icon-buttons {
+            display: flex;
+            align-items: center;
+        }
+
+            .icon-buttons a {
+                color: #000;
+                margin-left: 10px;
+                position: relative;
+            }
+
+            .icon-buttons .badge {
+                position: absolute;
+                top: -5px;
+                right: -10px;
+            }
+
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 40px 0;
+            width: 100%;
+        }
+
+            footer a {
+                color: #f2f2f2;
+                text-decoration: none;
+            }
+
+                footer a:hover {
+                    text-decoration: underline;
+                }
+
+        .footer-column h5 {
+            margin-bottom: 20px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+            .footer-column ul li {
+                margin-bottom: 10px;
+            }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="container d-flex justify-content-between">
+            <div>
+                <i class="fas fa-map-marker-alt"></i> Jordan, Ajloun
+                <i class="fas fa-envelope ml-3"></i> Ideamedia@gmail.com
+            </div>
+            <div>
+                <i class="fas fa-phone"></i> Call us: 0777956583
+                <span class="ml-3">Follow Us On:</span>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            @Html.ActionLink("Ideamedia", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Courses
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="coursesDropdown">
+                            <a class="dropdown-item" href="#">Course 1</a>
+                            <a class="dropdown-item" href="#">Course 2</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Pages", "Pages", "Home", new { area = "" }, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Shop", "Shop", "Home", new { area = "" }, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Blog", "Blog", "Home", new { area = "" }, new { @class = "nav-link" })
+                    </li>
+                </ul>
+                <div class="search-bar ml-auto">
+                    <select class="form-control">
+                        <option>Categories</option>
+                        <option>Category 1</option>
+                        <option>Category 2</option>
+                    </select>
+                    <input type="text" class="form-control" placeholder="Search For Course...">
+                </div>
+                <div class="icon-buttons ml-3">
+                    <a href="#"><i class="fas fa-bell"></i><span class="badge badge-pill badge-danger">0</span></a>
+                    <a href="#"><i class="fas fa-heart"></i><span class="badge badge-pill badge-danger">0</span></a>
+                    <a href="#"><i class="fas fa-shopping-cart"></i><span class="badge badge-pill badge-danger">0</span></a>
+                    @Html.ActionLink("Login", "Login", "Home", new { area = "" }, new { @class = "btn btn-warning ml-3" })
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row footer-container">
+                <div class="col-md-3 col-sm-6 footer-column">
+                    <h5>Ideamedia</h5>
+                    <p>Info: info@gmail.com</p>
+                    <p>Phone: 0777896653</p>
+                </div>
+                <div class="col-md-3 col-sm-6 footer-column">
+                    <h5>Useful Links</h5>
+                    <ul>
+                        <li><a href="#">Our vision</a></li>
+                        <li><a href="#">Our advisory board</a></li>
+                        <li><a href="#">Our partners</a></li>
+                        <li><a href="#">Become a partner</a></li>
+                        <li><a href="#">Work at Ideamedia</a></li>
+                        <li><a href="#">Guides Plan</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 footer-column">
+                    <h5>Our Company</h5>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Become Teacher</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Instructor</a></li>
+                        <li><a href="#">Events</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 footer-column">
+                    <h5>Get in Touch</h5>
+                    <p>Address: 123 Kensington, London, UK</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; @DateTime.Now.Year - Ideamedia. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@RenderSection("scripts", required: false)
+</body>
+</html>
