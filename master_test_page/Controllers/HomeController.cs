@@ -10,12 +10,26 @@ namespace master_test_page.Controllers
     {
         public ActionResult Index()
         {
+            if (Session["UserEmail"] == null)
+            {
+                return RedirectToAction("Login");
+            }
+
             return View();
         }
-        public ActionResult singup()
+        public ActionResult Logout()
         {
-            return View();
+            // حذف البيانات من الجلسة
+            Session.Clear();
+
+            // إعادة توجيه المستخدم إلى صفحة تسجيل الدخول
+            return RedirectToAction("Login");
         }
+
+        //public ActionResult singup()
+        //{
+        //    return View();
+        //}
         public ActionResult Courses()
         {
             return View();
@@ -40,6 +54,64 @@ namespace master_test_page.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+      
+
+        private static List<string[]> students = new List<string[]>();
+        public ActionResult singup(string FirstName, string LastName, string Email, string Password, string ConfirmPassword)
+        {
+            if (Password == ConfirmPassword)
+            {
+                // تخزين البيانات في المصفوفة
+                string[] studentData = new string[] { FirstName, LastName, Email, Password };
+                students.Add(studentData);
+
+                // إعادة توجيه إلى صفحة النجاح
+                ViewBag.Message = "Registration successful!";
+            }
+            else
+            {
+                // عرض رسالة خطأ
+                ViewBag.Message = "Passwords do not match.";
+            }
+
+            return View();
+        }
+        public ActionResult Login_Access(string Email, string Password)
+        {
+            bool isValidUser = false;
+
+            // تحقق من بيانات المستخدم
+            foreach (var student in students)
+            {
+                if (student[2] == Email && student[3] == Password)
+                {
+                    isValidUser = true;
+                    break;
+                }
+            }
+
+            if (isValidUser)
+            {
+                // تخزين البريد الإلكتروني في الجلسة
+                Session["UserEmail"] = Email;
+                ViewBag.Message = "Login successful!";
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                ViewBag.Message = "Invalid email or password.";
+            }
+
+            return View("Login");
+        }
+        public ActionResult Send_Message(string message1,string name1,string email1,string phone1)
+        {
+            ViewBag.Message1=message1;
+            ViewBag.Name1 = name1;
+            ViewBag.Email1 = email1;
+            ViewBag.Phone1 = phone1; 
+            return View("Contact");
         }
     }
 }

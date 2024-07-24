@@ -18,25 +18,44 @@
     </div>
     <div class="col-md-8">
         <h2>Send Us Message</h2>
-        <form>
+        <form action="/Home/Send_Message">
             <div class="form-group">
-                <textarea class="form-control" rows="5" placeholder="Your message"></textarea>
+                <textarea class="form-control" rows="5" placeholder="Your message" name="Message1" id="Message1"></textarea>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-4">
-                    <input type="text" class="form-control" placeholder="Name">
+                    <input type="text" class="form-control" placeholder="Name" name="Name1" id="Name1">
                 </div>
                 <div class="form-group col-md-4">
-                    <input type="email" class="form-control" placeholder="Email">
+                    <input type="email" class="form-control" placeholder="Email" name="Email1" id="Email1">
                 </div>
                 <div class="form-group col-md-4">
-                    <input type="text" class="form-control" placeholder="Phone">
+                    <input type="text" class="form-control" placeholder="Phone" name="Phone1" id="Phone1">
                 </div>
             </div>
             <button type="submit" class="btn btn-warning">Submit</button>
         </form>
     </div>
 </div>
+<br />
+@if (ViewBag.Message1 != null && ViewBag.Name1!=null && ViewBag.Email1 !=  null && ViewBag.Phone1 != null)
+{
+    <table border="1">
+        <tr>
+            <th>Message</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+        <tr>
+            <td>@ViewBag.Message1</td>
+            <td>@ViewBag.Name1</td>
+            <td>@ViewBag.Email1</td>
+            <td>@ViewBag.Phone1</td>
+        </tr>
+    </table>
+
+}
 <div class="map mt-4">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48315.15927653679!2d-74.0060152!3d40.7127753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c250bd1b63f13f%3A0xe7a9f10e34a2d200!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 </div>

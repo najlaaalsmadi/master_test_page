@@ -167,7 +167,21 @@
                     <a href="#"><i class="fas fa-bell"></i><span class="badge badge-pill badge-danger">0</span></a>
                     <a href="#"><i class="fas fa-heart"></i><span class="badge badge-pill badge-danger">0</span></a>
                     <a href="#"><i class="fas fa-shopping-cart"></i><span class="badge badge-pill badge-danger">0</span></a>
-                    @Html.ActionLink("Login", "Login", "Home", new { area = "" }, new { @class = "btn btn-warning ml-3" })
+                    @{
+                        var isLoggedIn = Session["UserEmail"] != null;
+                    }
+
+                    @if (isLoggedIn)
+                    {
+                        @*<a href="@Url.Action("Logout", "Home")" class="btn btn-warning">Logout</a>*@
+
+                        @Html.ActionLink("Logout", "Logout", "Home", new { area = "" }, new { @class = "btn btn-danger" })
+
+                    }
+                    else
+                    {
+                        @Html.ActionLink("Login", "Login", "Home", new { area = "" }, new { @class = "btn btn-warning" })
+                    }
                 </div>
             </div>
         </div>
