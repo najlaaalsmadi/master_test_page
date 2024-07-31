@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using static System.Net.Mime.MediaTypeNames;
+using System.Web.UI.WebControls;
 
 namespace master_test_page.Controllers
 {
@@ -10,14 +12,33 @@ namespace master_test_page.Controllers
     {
         public ActionResult Index()
         {
-            if (Session["UserEmail"] == null)
-            {
-                return RedirectToAction("Login");
-            }
+            //if (Session["UserEmail"] == null)
+            //{
+            //    return RedirectToAction("Login");
+            //}
 
             return View();
         }
-        public ActionResult Logout()
+        public ActionResult Lesson()
+        {
+            return View();
+        }
+        public ActionResult Handicrafts()
+        {
+            return View();
+        }
+        
+            public ActionResult ViewCourse()
+        {
+            return View();
+        }
+        
+        public ActionResult card()
+        {
+            return View();
+        }
+        
+            public ActionResult Logout()
         {
             // حذف البيانات من الجلسة
             Session.Clear();
@@ -34,6 +55,19 @@ namespace master_test_page.Controllers
         {
             return View();
         }
+        public ActionResult CourseDetails()
+        {
+            return View();
+        }
+        public ActionResult AllEvents()
+        {
+            return View();
+        }
+        public ActionResult EventsDetails()
+        {
+            return View();
+        }
+        
         public ActionResult shop()
         {
             return View();
@@ -42,13 +76,56 @@ namespace master_test_page.Controllers
         {
             return View();
         }
+        public ActionResult InstructorsDetails()
+        {
+            return View();
+        }
+        public ActionResult profile()
+        {
+            return View();
+        }
+      
+        
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Your application About page.";
 
             return View();
         }
+        //public ActionResult AllInstructors()
+        //{
+        //    ViewBag.Message = "Your application AllInstructors page.";
 
+        //    return View();
+        //}
+        public ActionResult Paymentsuccess()
+        {
+            return View();
+        }
+        public ActionResult Payment() { return View(); }
+        public ActionResult AllInstructors() {
+
+            return View();
+        }
+        public ActionResult Rental()
+        {
+            ViewBag.Message = "Your application Rental page.";
+
+            return View();
+        }
+        public ActionResult shopdetails()
+        {
+            ViewBag.Message = "Your application   shop details page.";
+
+            return View();
+        }
+        public ActionResult page404()
+        {
+            ViewBag.Message = "Your application   shop details page.";
+
+            return View();
+        }
+      
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
@@ -96,7 +173,7 @@ namespace master_test_page.Controllers
                 // تخزين البريد الإلكتروني في الجلسة
                 Session["UserEmail"] = Email;
                 ViewBag.Message = "Login successful!";
-                return RedirectToAction("Index");
+                return RedirectToAction("shop");
             }
             else
             {

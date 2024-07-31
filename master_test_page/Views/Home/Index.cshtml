@@ -1,34 +1,293 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+
+<style>
+    .card-text{
+        color:black;
+    }
+    .card-title{
+        color:black;
+    }
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .card:hover {
+            transform: translateY(-10px); /* Moves the card up by 10px on hover */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow on hover */
+        }
+</style>
+
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<main>
-    <section class="row" aria-labelledby="aspnetTitle">
-        <h1 id="title">ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
-    </section>
 
-    <div class="row">
-        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-            <h2 id="gettingStartedTitle">Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="librariesTitle">
-            <h2 id="librariesTitle">Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="hostingTitle">
-            <h2 id="hostingTitle">Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-        </section>
+<div class="container py-5">
+    <div class="row text-center">
+        <div class="col-md-6 mb-3 mb-md-0">
+            <h1><span class="highlight">Start Your</span> Learning Journey<br>and <span class="highlight">Gain New Skills</span> Today</h1>
+            <p>We offer a wide range of courses and career paths<br>to help you learn a new profession or improve your existing skills.</p>
+            <button class="btn btn-warning  align-content-center">Buy Now</button>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="~/image/carpentry.png" class="img-fluid rounded" alt="Carpentry">
+        </div>
     </div>
-</main>
+</div>
+
+<div class="container py-5">
+    <h2 class="text-center mb-4">Trending Categories</h2>
+    <p class="text-center mb-4">Top Categories We Have</p>
+    <p class="text-center mb-4">When known printer took a galley of type scrambled it to make a type specimen book.</p>
+
+    <div id="categoryCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="d-flex flex-wrap justify-content-center">
+                   
+                        <a href="@Url.Action("Handicrafts", "Home")"  class="card mx-2 mb-3 text-decoration-none" style="width: 18rem;">
+
+                            <div class="card-body text-center">
+                                <i class="fas fa-hands fa-3x mb-2 " style="color:orange"></i>
+                                <h5 class="card-title" style="color:orange">Handicrafts</h5>
+                                <p class="card-text" style="color:orange">(10)</p>
+                            </div>
+                        </a>
+                        <a href="/category/handmade-arts" class="card mx-2 mb-3 text-decoration-none" style="width: 18rem;">
+                            <div class="card-body text-center">
+                                <i class="fas fa-palette fa-3x mb-2" style="color:orange"></i>
+                                <h5 class="card-title" style="color:orange">Handmade Arts</h5>
+                                <p class="card-text" style="color:orange">(6)</p>
+                            </div>
+                        </a>
+                        <a href="/category/fashion-styling" class="card mx-2 mb-3 text-decoration-none" style="width: 18rem;">
+                            <div class="card-body text-center">
+                                <i class="fas fa-tshirt fa-3x mb-2" style="color:orange"></i>
+                                <h5 class="card-title" style="color:orange">Fashion & Styling</h5>
+                                <p class="card-text" style="color:orange">(5)</p>
+                            </div>
+                        </a>
+                        <a href="/category/tech-repair" class="card mx-2 mb-3 text-decoration-none" style="width: 18rem;">
+                            <div class="card-body text-center" style="color:orange">
+                                <i class="fas fa-tools fa-3x mb-2" style="color:orange"></i>
+                                <h5 class="card-title" style="color:orange">Tech Repair</h5>
+                                <p class="card-text" style="color:orange">(5)</p>
+                            </div>
+                        </a>
+                        <a href="/category/visual-arts" class="card mx-2 mb-3 text-decoration-none" style="width: 18rem;">
+                            <div class="card-body text-center">
+                                <i class="fas fa-paint-brush fa-3x mb-2" style="color:orange"></i>
+                                <h5 class="card-title" style="color:orange">Visual Arts</h5>
+                                <p class="card-text" style="color:orange">(6)</p>
+                            </div>
+                        </a>
+                        <a href="/category/beauty-makeup" class="card mx-2 mb-3 text-decoration-none" style="width: 18rem;">
+                            <div class="card-body text-center">
+                                <i class="fas fa-magic fa-3x mb-2" style="color:orange"></i>
+                                <h5 class="card-title" style="color:orange">Beauty & Makeup</h5>
+                                <p class="card-text" style="color:orange">(5)</p>
+                            </div>
+                        </a>
+                        <a href="/category/culinary-arts" class="card mx-2 mb-3 text-decoration-none" style="width: 18rem;">
+                            <div class="card-body text-center">
+                                <i class="fas fa-utensils fa-3x mb-2" style="color:orange"></i>
+                                <h5 class="card-title" style="color:orange">Culinary Arts</h5>
+                                <p class="card-text" style="color:orange">(5)</p>
+                            </div>
+                        </a>
+                        <a href="/category/home-garden" class="card mx-2 mb-3 text-decoration-none" style="width: 18rem;">
+                            <div class="card-body text-center">
+                                <i class="fas fa-tree fa-3x mb-2" style="color:orange"></i>
+                                <h5 class="card-title" style="color:orange">Home & Garden</h5>
+                                <p class="card-text" style="color:orange">(5)</p>
+                            </div>
+                        </a>
+</div>
+            </div>
+            <!-- Add more carousel items if needed -->
+        </div>
+    </div>
+</div>
+
+<div class="container text-center py-5">
+    <h2 class="mb-4">Explore Our World's Best Courses</h2>
+    <p class="mb-4">When known printer took a galley of type scrambled it to make a type specimen book.</p>
+
+    <div class="d-flex justify-content-center my-3 flex-wrap">
+        <a href="/courses/all" class="btn btn-light mx-2">All Courses</a>
+        <a href="/courses/handicrafts-sewing" class="btn btn-light mx-2">Handicrafts - Sewing Clothes</a>
+        <a href="/courses/handicrafts-carpentry" class="btn btn-light mx-2">Handicrafts - Carpentry</a>
+        <a href="/courses/fashion-design" class="btn btn-light mx-2">Fashion & Styling - Fashion Design</a>
+        <a href="/courses/handmade-arts" class="btn btn-light mx-2">Handmade Arts - Bags, Jewelry and Beaded Clothes</a>
+    </div>
+
+    <div id="coursesCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-md-3 mb-4">
+                        <a href="@Url.Action("CourseDetails", "Home")" class="text-decoration-none">
+                            <div class="card">
+                                <img src="~/image/Pink Brush Feminine  Logo (4).png" class="card-img-top" alt="Handmade Jewelry">
+
+                                <div class="card-body text-center">
+                                    <span class="badge badge-info">Beginner</span> <span class="badge badge-secondary">Handmade Arts</span>
+                                    <h5 class="card-title mt-2">Handmade Jewelry & Beaded Clothes</h5>
+                                    <p class="card-text reviews">(4.8 Reviews)</p>
+                                    <p class="card-text">By Emma Stone</p>
+                                    <p class="card-text price">$22.00</p>
+                                    <a href="@Url.Action("CourseDetails", "Home")" class="btn btn-warning">Enroll Now</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <a href="@Url.Action("CourseDetails", "Home")" class="text-decoration-none">
+
+                            <div class="card">
+                                <img src="~/image/sewing-clothes.png" class="card-img-top" alt="Sewing Clothes">
+                                <div class="card-body text-center">
+                                    <span class="badge badge-primary">Beginner</span> <span class="badge badge-secondary">Handicraft</span>
+                                    <h5 class="card-title mt-2">Handicraft Sewing Clothes</h5>
+                                    <p class="card-text reviews">(4.6 Reviews)</p>
+                                    <p class="card-text">By Emma Stone</p>
+                                    <p class="card-text price">$20.00</p>
+                                    <a href="@Url.Action("CourseDetails", "Home")" class="btn btn-warning">Enroll Now</a>
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <a href="/course/carpentry-basics" class="text-decoration-none">
+                            <div class="card">
+                                <img src="~/image/carpentry.png" class="card-img-top" alt="Carpentry">
+                                <div class="card-body text-center">
+                                    <span class="badge badge-warning">Intermediate</span> <span class="badge badge-secondary">Handicraft</span>
+                                    <h5 class="card-title mt-2">Handicraft Carpentry Basics</h5>
+                                    <p class="card-text reviews">(4.7 Reviews)</p>
+                                    <p class="card-text">By Emma Stone</p>
+                                    <p class="card-text price">$25.00</p>
+                                    <a href="/course/carpentry-basics" class="btn btn-warning">Enroll Now</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <a href="/course/fashion-design-fundamentals" class="text-decoration-none">
+                            <div class="card">
+                                <img src="~/image/fashion-design.png" class="card-img-top" alt="Fashion Design">
+                                <div class="card-body text-center">
+                                    <span class="badge badge-success">Advanced</span> <span class="badge badge-secondary">Fashion</span>
+                                    <h5 class="card-title mt-2">Fashion Design Fundamentals</h5>
+                                    <p class="card-text reviews">(4.9 Reviews)</p>
+                                    <p class="card-text">By Emma Stone</p>
+                                    <p class="card-text price">$30.00</p>
+                                    <a href="/course/fashion-design-fundamentals" class="btn btn-warning">Enroll Now</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            </div>
+            <!-- Add more carousel items if needed -->
+        </div>
+
+    </div>
+</div>
+
+<section class="news-feed py-5">
+    <div class="container">
+        <h2 class="mb-4">Our Latest News Feed</h2>
+        <p class="mb-4">When an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 event-card">
+                <a href="@Url.Action("EventsDetails", "Home")" class="text-decoration-none text-dark">
+                    <div class="card">
+                        <img src="~/image/blog5.jpg" class="card-img-top event-img" alt="Event 1">
+                        <div class="card-body">
+                            <div class="event-date">25 June, 2024</div>
+                            <div class="event-title">Smart Device Repair Seminar with Industry Professionals</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6 event-card">
+                <a href="~/path/to/your/page2.html" class="text-decoration-none text-dark">
+                    <div class="card">
+                        <img src="~/image/blog4.jpg" class="card-img-top event-img" alt="Event 2">
+                        <div class="card-body">
+                            <div class="event-date">25 June, 2024</div>
+                            <div class="event-title">Awe: Creating Futures Through Technology</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6 event-card">
+                <a href="~/path/to/your/page3.html" class="text-decoration-none text-dark">
+                    <div class="card">
+                        <img src="~/image/blog3.jpg" class="card-img-top event-img" alt="Event 3">
+                        <div class="card-body">
+                            <div class="event-date">25 June, 2024</div>
+                            <div class="event-title">Exactly How Technology Can Make Reading</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6 event-card">
+                <a href="~/path/to/your/page4.html" class="text-decoration-none text-dark">
+                    <div class="card">
+                        <img src="~/image/blog6.jpg" class="card-img-top event-img" alt="Event 4">
+                        <div class="card-body">
+                            <div class="event-date">25 June, 2024</div>
+                            <div class="event-title">Learning JavaScript With Imagination</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+      
+       </div>
+            </div>
+</section>
+<section class="container py-5">
+    <h2 class="text-center mb-4">Shop Our Craft Supplies</h2>
+    <p class="text-center mb-4">Discover a range of high-quality craft supplies and tools for all your creative needs. Whether you're a beginner or a professional, we have the perfect materials for your next project.</p>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <a href="link-to-crystal-beads-page" class="card text-decoration-none text-dark">
+                <img src="~/image/CrystalBeads.png" class="card-img-top" alt="Crystal Beads" />
+                <div class="card-body text-center">
+                    <h5 class="card-title">Crystal Beads</h5>
+                    <p class="card-text">$5.00 - $20.00</p>
+                    <p class="card-text">⭐⭐⭐⭐⭐</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 mb-4">
+            <a href="link-to-copper-wire-page" class="card text-decoration-none text-dark">
+                <img src="~/image/CopperWire.png" class="card-img-top" alt="Copper Wire" />
+                <div class="card-body text-center">
+                    <h5 class="card-title">Copper Wire</h5>
+                    <p class="card-text">$15.00</p>
+                    <p class="card-text">⭐⭐⭐⭐</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 mb-4">
+            <a href="@Url.Action("shopdetails", "Home")" class="card text-decoration-none text-dark">
+                <img src="~/image/KnittingMachine.png" class="card-img-top" alt="Knitting Machine" />
+                <div class="card-body text-center">
+                    <h5 class="card-title">Knitting Machine</h5>
+                    <p class="card-text">$150.00</p>
+                    <p class="card-text">⭐⭐⭐⭐⭐</p>
+                </div>
+            </a>
+        </div>
+    
+    </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+@*<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>*@

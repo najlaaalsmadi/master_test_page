@@ -1,0 +1,186 @@
+﻿
+
+
+@{
+    ViewBag.Title = "ALL Instructors";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .card:hover {
+            transform: translateY(-10px); /* Moves the card up by 10px on hover */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow on hover */
+        }
+</style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<br />
+
+<!-- Breadcrumb Navigation -->
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="~/Views/Home/Index.cshtml">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">All Instructors</li>
+</ol>
+
+<!-- Instructors Section -->
+<div class="container py-5">
+    <div class="row">
+        <!-- Instructor Card 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="~/image/instructor1.png" class="card-img-top" alt="Mark Jukarberg" />
+                <div class="card-body text-center">
+                    <h5 class="card-title">Mark Jukarberg</h5>
+                    <p class="card-text">UX Design Lead</p>
+                    <div class="rating mb-3">⭐⭐⭐⭐⭐ (4.8 Ratings)</div>
+                    <div class="social-icons">
+                        <a href="#"><img src="facebook.png" alt="Facebook" class="me-2" /></a>
+                        <a href="#"><img src="twitter.png" alt="Twitter" class="me-2" /></a>
+                        <a href="#"><img src="whatsapp.png" alt="WhatsApp" class="me-2" /></a>
+                        <a href="#"><img src="instagram.png" alt="Instagram" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Instructor Card 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="~/image/instructor2.png" class="card-img-top" alt="Olivia Mia" />
+                <div class="card-body text-center">
+                    <h5 class="card-title">Olivia Mia</h5>
+                    <p class="card-text">Web Design</p>
+                    <div class="rating mb-3">⭐⭐⭐⭐⭐ (4.8 Ratings)</div>
+                    <div class="social-icons">
+                        <a href="#"><img src="facebook.png" alt="Facebook" class="me-2" /></a>
+                        <a href="#"><img src="twitter.png" alt="Twitter" class="me-2" /></a>
+                        <a href="#"><img src="whatsapp.png" alt="WhatsApp" class="me-2" /></a>
+                        <a href="#"><img src="instagram.png" alt="Instagram" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Instructor Card 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="~/image/instructor3.png" class="card-img-top" alt="William Hope" />
+                <div class="card-body text-center">
+                    <h5 class="card-title">William Hope</h5>
+                    <p class="card-text">Digital Marketing</p>
+                    <div class="rating mb-3">⭐⭐⭐⭐⭐ (4.8 Ratings)</div>
+                    <div class="social-icons">
+                        <a href="#"><img src="facebook.png" alt="Facebook" class="me-2" /></a>
+                        <a href="#"><img src="twitter.png" alt="Twitter" class="me-2" /></a>
+                        <a href="#"><img src="whatsapp.png" alt="WhatsApp" class="me-2" /></a>
+                        <a href="#"><img src="instagram.png" alt="Instagram" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Instructor Card 4 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="~/image/instructor4.png" class="card-img-top" alt="Sophia Ava" />
+                <div class="card-body text-center">
+                    <h5 class="card-title">Sophia Ava</h5>
+                    <p class="card-text">Web Development</p>
+                    <div class="rating mb-3">⭐⭐⭐⭐⭐ (4.8 Ratings)</div>
+                    <div class="social-icons">
+                        <a href="#"><img src="facebook.png" alt="Facebook" class="me-2" /></a>
+                        <a href="#"><img src="twitter.png" alt="Twitter" class="me-2" /></a>
+                        <a href="#"><img src="whatsapp.png" alt="WhatsApp" class="me-2" /></a>
+                        <a href="#"><img src="instagram.png" alt="Instagram" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Instructor Card 5 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="~/image/instructor5.png" class="card-img-top" alt="Sophia Ava" />
+                <div class="card-body text-center">
+                    <h5 class="card-title">Sophia Ava</h5>
+                    <p class="card-text">Web Development</p>
+                    <div class="rating mb-3">⭐⭐⭐⭐⭐ (4.8 Ratings)</div>
+                    <div class="social-icons">
+                        <a href="#"><img src="facebook.png" alt="Facebook" class="me-2" /></a>
+                        <a href="#"><img src="twitter.png" alt="Twitter" class="me-2" /></a>
+                        <a href="#"><img src="whatsapp.png" alt="WhatsApp" class="me-2" /></a>
+                        <a href="#"><img src="instagram.png" alt="Instagram" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Instructor Card 6 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="~/image/instructor6.png" class="card-img-top" alt="Sophia Ava" />
+                <div class="card-body text-center">
+                    <h5 class="card-title">Sophia Ava</h5>
+                    <p class="card-text">Web Development</p>
+                    <div class="rating mb-3">⭐⭐⭐⭐⭐ (4.8 Ratings)</div>
+                    <div class="social-icons">
+                        <a href="#"><img src="facebook.png" alt="Facebook" class="me-2" /></a>
+                        <a href="#"><img src="twitter.png" alt="Twitter" class="me-2" /></a>
+                        <a href="#"><img src="whatsapp.png" alt="WhatsApp" class="me-2" /></a>
+                        <a href="#"><img src="instagram.png" alt="Instagram" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Instructor Card 7 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="~/image/instructor7.png" class="card-img-top" alt="Sophia Ava" />
+                <div class="card-body text-center">
+                    <h5 class="card-title">Sophia Ava</h5>
+                    <p class="card-text">Web Development</p>
+                    <div class="rating mb-3">⭐⭐⭐⭐⭐ (4.8 Ratings)</div>
+                    <div class="social-icons">
+                        <a href="#"><img src="facebook.png" alt="Facebook" class="me-2" /></a>
+                        <a href="#"><img src="twitter.png" alt="Twitter" class="me-2" /></a>
+                        <a href="#"><img src="whatsapp.png" alt="WhatsApp" class="me-2" /></a>
+                        <a href="#"><img src="instagram.png" alt="Instagram" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Instructor Card 8 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="~/image/instructor8.png" class="card-img-top" alt="Sophia Ava" />
+                <div class="card-body text-center">
+                    <h5 class="card-title">Sophia Ava</h5>
+                    <p class="card-text">Web Development</p>
+                    <div class="rating mb-3">⭐⭐⭐⭐⭐ (4.8 Ratings)</div>
+                    <div class="social-icons">
+                        <a href="#"><img src="facebook.png" alt="Facebook" class="me-2" /></a>
+                        <a href="#"><img src="twitter.png" alt="Twitter" class="me-2" /></a>
+                        <a href="#"><img src="whatsapp.png" alt="WhatsApp" class="me-2" /></a>
+                        <a href="#"><img src="instagram.png" alt="Instagram" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Instructor Card 9 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="~/image/instructor9.png" class="card-img-top" alt="Sophia Ava" />
+                <div class="card-body text-center">
+                    <h5 class="card-title">Sophia Ava</h5>
+                    <p class="card-text">Web Development</p>
+                    <div class="rating mb-3">⭐⭐⭐⭐⭐ (4.8 Ratings)</div>
+                    <div class="social-icons">
+                        <a href="#"><img src="facebook.png" alt="Facebook" class="me-2" /></a>
+                        <a href="#"><img src="twitter.png" alt="Twitter" class="me-2" /></a>
+                        <a href="#"><img src="whatsapp.png" alt="WhatsApp" class="me-2" /></a>
+                        <a href="#"><img src="instagram.png" alt="Instagram" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

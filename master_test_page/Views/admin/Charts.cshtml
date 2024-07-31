@@ -1,0 +1,330 @@
+﻿@{
+    ViewBag.Title = "Charts";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container py-6">
+    <h2 class="mb-5 text-center">Charts</h2>
+
+    <div class="row mb-4 justify-content-around">
+        <div class="col-md-6 mb-4 d-flex justify-content-around">
+            <div class="card w-100">
+                <div class="card-header">
+                    Bar Chart
+                </div>
+                <div class="card-body">
+                    <canvas id="barChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4 d-flex justify-content-around">
+            <div class="card w-100">
+                <div class="card-header">
+                    Pie Chart
+                </div>
+                <div class="card-body">
+                    <canvas id="pieChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4 justify-content-center">
+        <div class="col-md-6 mb-4 d-flex justify-content-center">
+            <div class="card w-100">
+                <div class="card-header">
+                    Line Chart
+                </div>
+                <div class="card-body">
+                    <canvas id="lineChart"></canvas>
+                </div>
+            </div>
+        </div>
+  
+    </div>
+
+    <div class="row mb-4 justify-content-center">
+        <div class="col-md-6 mb-4 d-flex justify-content-center">
+            <div class="card w-100">
+                <div class="card-header">
+                    Handicrafts
+                </div>
+                <div class="card-body">
+                    <canvas id="handicraftsChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4 d-flex justify-content-center">
+            <div class="card w-100">
+                <div class="card-header">
+                    Handmade Arts
+                </div>
+                <div class="card-body">
+                    <canvas id="handmadeArtsChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4 justify-content-center">
+        <div class="col-md-6 mb-4 d-flex justify-content-center">
+            <div class="card w-100">
+                <div class="card-header">
+                    Fashion & Styling
+                </div>
+                <div class="card-body">
+                    <canvas id="fashionChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4 d-flex justify-content-center">
+            <div class="card w-100">
+                <div class="card-header">
+                    Tech Repair
+                </div>
+                <div class="card-body">
+                    <canvas id="techRepairChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4 justify-content-center">
+        <div class="col-md-6 mb-4 d-flex justify-content-center">
+            <div class="card w-100">
+                <div class="card-header">
+                    Visual Arts
+                </div>
+                <div class="card-body">
+                    <canvas id="visualArtsChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4 d-flex justify-content-center">
+            <div class="card w-100">
+                <div class="card-header">
+                    Beauty & Makeup
+                </div>
+                <div class="card-body">
+                    <canvas id="beautyChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4 justify-content-center">
+        <div class="col-md-6 mb-4 d-flex justify-content-center">
+            <div class="card w-100">
+                <div class="card-header">
+                    Culinary Arts
+                </div>
+                <div class="card-body">
+                    <canvas id="culinaryChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4 d-flex justify-content-center">
+            <div class="card w-100">
+                <div class="card-header">
+                    Home & Garden
+                </div>
+                <div class="card-body">
+                    <canvas id="homeGardenChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Initialize your charts here, similar to your previous script
+    // Bar Chart
+    new Chart(document.getElementById('barChart').getContext('2d'), {
+        type: 'bar',
+        data: {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            datasets: [{
+                label: 'User Registrations',
+                data: [12, 19, 3, 5, 2, 3, 10],
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    // Pie Chart
+    new Chart(document.getElementById('pieChart').getContext('2d'), {
+        type: 'pie',
+        data: {
+            labels: ['Handicrafts', 'Handmade Arts', 'Fashion & Styling', 'Tech Repair', 'Visual Arts', 'Beauty & Makeup', 'Culinary Arts', 'Home & Garden'],
+            datasets: [{
+                label: 'Category Distribution',
+                data: [12, 19, 3, 5, 2, 3, 10, 7],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Category Distribution'
+                }
+            }
+        }
+    });
+
+    // Line Chart
+    new Chart(document.getElementById('lineChart').getContext('2d'), {
+        type: 'line',
+        data: {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            datasets: [{
+                label: 'Sales Over Time',
+                data: [15, 25, 5, 10, 8, 12, 20],
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1,
+                fill: true
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    // Doughnut Charts for Category Popularity
+    function createDoughnutChart(ctx, labels, data, title) {
+        return new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: title,
+                    data: data,
+                    backgroundColor: [
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: title
+                    }
+                }
+            }
+        });
+    }
+
+    createDoughnutChart(
+        document.getElementById('handicraftsChart').getContext('2d'),
+        ['Pottery', 'Weaving', 'Knitting', 'Jewelry', 'Woodworking'],
+        [20, 15, 10, 30, 25],
+        'Handicrafts'
+    );
+
+    createDoughnutChart(
+        document.getElementById('handmadeArtsChart').getContext('2d'),
+        ['Glass Painting', 'Accessory Design', 'Paper Art', 'Ceramic Art', 'Upcycled Design'],
+        [25, 15, 20, 10, 30],
+        'Handmade Arts'
+    );
+
+    createDoughnutChart(
+        document.getElementById('fashionChart').getContext('2d'),
+        ['Fashion Design', 'Clothing Coordination', 'Event Fashion', 'Personal Styling', 'Sustainable Fashion'],
+        [30, 20, 15, 25, 10],
+        'Fashion & Styling'
+    );
+
+    createDoughnutChart(
+        document.getElementById('techRepairChart').getContext('2d'),
+        ['Smartphone Repair', 'Computer Repair', 'Tablet Repair', 'Screen Replacement', 'Laptop Performance'],
+        [20, 25, 15, 10, 30],
+        'Tech Repair'
+    );
+
+    createDoughnutChart(
+        document.getElementById('visualArtsChart').getContext('2d'),
+        ['Drawing', 'Photography', 'Sculpture', 'Mural Art', 'Video Art'],
+        [25, 30, 15, 10, 20],
+        'Visual Arts'
+    );
+
+    createDoughnutChart(
+        document.getElementById('beautyChart').getContext('2d'),
+        ['Makeup Artistry', 'Skincare', 'Professional Techniques', 'Hair Styling', 'Hair Care'],
+        [30, 20, 15, 10, 25],
+        'Beauty & Makeup'
+    );
+
+    createDoughnutChart(
+        document.getElementById('culinaryChart').getContext('2d'),
+        ['Basic Techniques', 'Cake Decorating', 'Global Cuisine', 'Healthy Cooking', 'Dessert Recipes'],
+        [25, 20, 15, 30, 10],
+        'Culinary Arts'
+    );
+
+    createDoughnutChart(
+        document.getElementById('homeGardenChart').getContext('2d'),
+        ['Interior Design', 'Gardening', 'DIY Projects', 'Home Improvement', 'Space Organization'],
+        [15, 20, 25, 30, 10],
+        'Home & Garden'
+    );
+</script>

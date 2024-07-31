@@ -1,9 +1,64 @@
 ﻿@{
     ViewBag.Title = "About";
 }
-<main aria-labelledby="title">
-    <h2 id="title">@ViewBag.Title.</h2>
-    <h3>@ViewBag.Message</h3>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    .about-section {
+        padding: 60px 0;
+    }
 
-    <p>Use this area to provide additional information.</p>
-</main>
+        .about-section img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .about-section .text-content {
+            padding: 20px;
+        }
+</style>
+
+<div class="container about-section">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="text-content">
+                <h2>About Us</h2>
+                <p>
+                    The <strong>Ideamedia</strong> project is an innovative online educational platform that combines handicrafts with digital media. It aims to provide comprehensive educational pathways that include learning handicrafts as a professional path while offering interactive and paid content.
+                </p>
+                <p>
+                    The platform offers a comprehensive educational experience, enabling users to develop both their manual and technical skills, as well as providing opportunities to seek job prospects and promote products and services.
+                </p>
+               
+                <a href="#" class="btn btn-warning">Book a Call</a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img src="~/image/aboutimg.png" alt="Project Image"/>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-4 text-center">
+            <h3>01</h3>
+            <h4>Development</h4>
+            <p>We aim to provide interactive education that combines traditional handicraft learning with digital media technologies to offer a comprehensive and innovative educational experience.</p>
+        </div>
+        <div class="col-md-4 text-center">
+            <h3>02</h3>
+            <h4>Design Projects</h4>
+            <p>Supporting users in developing their manual and creative skills, and encouraging them to start their own projects.</p>
+        </div>
+        <div class="col-md-4 text-center">
+            <h3>03</h3>
+            <h4>New Materials</h4>
+            <p>Providing paid educational pathways that enhance job opportunities and professional craftsmanship skills.</p>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+

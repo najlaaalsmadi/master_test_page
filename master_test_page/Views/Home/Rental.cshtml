@@ -1,5 +1,7 @@
-﻿@{
-    ViewBag.Title = "Shop Page";
+﻿
+@{
+    ViewBag.Title = "Rental";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <style>
     .card {
@@ -11,6 +13,7 @@
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow on hover */
         }
 </style>
+
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <br />
@@ -58,96 +61,95 @@
     <section class="col-md-9">
         <div class="row">
             <div class="col-md-4 mb-4">
-                <a href="@Url.Action("ShopDetails", "Home")" class="card text-decoration-none text-dark">
-
-
-                    <img src="~/image/CrystalBeads.png" class="card-img-top" alt="Crystal Beads" />
+                <div class="card">
+                    <img src="~/image/CrystalBeads.png" />
                     <div class="card-body text-center">
                         <h5 class="card-title">Crystal Beads</h5>
                         <p class="card-text">$5.00 - $20.00</p>
                         <p class="card-text">⭐⭐⭐⭐⭐</p>
                     </div>
-                </a>
+                </div>
             </div>
             <div class="col-md-4 mb-4">
-                <a href="link-to-copper-wire-page" class="card text-decoration-none text-dark">
-                    <img src="~/image/CopperWire.png" class="card-img-top" alt="Copper Wire" />
+                <div class="card">
+                    <img src="~/image/CopperWire.png" />
                     <div class="card-body text-center">
                         <h5 class="card-title">Copper Wire</h5>
                         <p class="card-text">$15.00</p>
                         <p class="card-text">⭐⭐⭐⭐</p>
                     </div>
-                </a>
+                </div>
             </div>
             <div class="col-md-4 mb-4">
-                <a href="@Url.Action("ShopDetails", "Home")" class="card text-decoration-none text-dark">
-                    <img src="~/image/KnittingMachine.png" class="card-img-top" alt="Knitting Machine" />
+                <div class="card">
+                    <img src="~/image/KnittingMachine.png" />
                     <div class="card-body text-center">
                         <h5 class="card-title">Knitting Machine</h5>
                         <p class="card-text">$150.00</p>
                         <p class="card-text">⭐⭐⭐⭐⭐</p>
                     </div>
-                </a>
+                </div>
             </div>
             <div class="col-md-4 mb-4">
-                <a href="@Url.Action("ShopDetails", "Home")" class="card text-decoration-none text-dark">
-                    <img src="~/image/Ribbons,measuring,tape, and,scissors.png" class="card-img-top" alt="Ribbons, measuring tape, and scissors" />
+                <div class="card">
+                    <img src="~/image/Ribbons,measuring,tape, and,scissors.png" />
                     <div class="card-body text-center">
                         <h5 class="card-title">Ribbons, measuring tape, and scissors</h5>
                         <p class="card-text">$20.00</p>
                         <p class="card-text">⭐⭐⭐⭐</p>
                     </div>
-                </a>
+                </div>
             </div>
             <div class="col-md-4 mb-4">
-                <a href="link-to-mens-teddy-page" class="card text-decoration-none text-dark">
-                    <img src="~/image/Men'sTeddy.jpg" class="card-img-top" alt="Men's Teddy" />
+                <div class="card">
+                    <img src="~/image/Men'sTeddy.jpg" />
                     <div class="card-body text-center">
                         <h5 class="card-title">Men's Teddy</h5>
                         <p class="card-text">$40.00</p>
                         <p class="card-text">⭐⭐⭐</p>
                     </div>
-                </a>
+                </div>
             </div>
             <div class="col-md-4 mb-4">
-                <a href="link-to-fashion-design-page" class="card text-decoration-none text-dark">
-                    <img src="~/image/Fashion Design.png" class="card-img-top" alt="Fashion Design" />
+                <div class="card">
+                    <img src="~/image/Fashion Design.png" />
                     <div class="card-body text-center">
                         <h5 class="card-title">Fashion Design</h5>
                         <p class="card-text">$30.00</p>
                         <p class="card-text">⭐⭐⭐</p>
                     </div>
-                </a>
+                </div>
             </div>
             <div class="col-md-4 mb-4">
-                <a href="link-to-resin-crafting-page" class="card text-decoration-none text-dark">
-                    <img src="~/image/Resin Crafting Complete Equipment.jpg" class="card-img-top" alt="Resin Crafting Complete Equipment" />
+                <div class="card">
+                    <img src="~/image/Resin Crafting Complete Equipment.jpg" />
                     <div class="card-body text-center">
                         <h5 class="card-title">Resin Crafting Complete Equipment</h5>
                         <p class="card-text">$12.00</p>
                         <p class="card-text">⭐⭐</p>
                     </div>
-                </a>
+                </div>
             </div>
             <div class="col-md-4 mb-4">
-                <a href="link-to-soap-making-page" class="card text-decoration-none text-dark">
-                    <img src="~/image/Soap making complete equipment.png" class="card-img-top" alt="Soap Making Colorants" />
+                <div class="card">
+                    <img src="~/image/Soap making complete equipment.png" />
                     <div class="card-body text-center">
                         <h5 class="card-title">Soap Making Colorants</h5>
                         <p class="card-text">$25.00</p>
                         <p class="card-text">⭐⭐⭐⭐⭐</p>
                     </div>
-                </a>
+                </div>
             </div>
             <div class="col-md-4 mb-4">
-                <a href="link-to-makeup-artistry-page" class="card text-decoration-none text-dark">
-                    <img src="~/image/Makeup Artistry Vending Equipment.png" class="card-img-top" alt="Makeup Artistry Vending Equipment" />
+                <div class="card">
+                    <img src="~/image/Makeup Artistry Vending Equipment.png" />
+
                     <div class="card-body text-center">
                         <h5 class="card-title">Makeup Artistry Vending Equipment</h5>
                         <p class="card-text">$35.00</p>
                         <p class="card-text">⭐</p>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
         <nav aria-label="Page navigation example">

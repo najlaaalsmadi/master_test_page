@@ -1,0 +1,84 @@
+﻿@{
+    ViewBag.Title = "Shop Details";
+}
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<div class="container mt-4">
+    <div class="row">
+        <!-- Product Images -->
+        <div class="col-md-6 d-flex">
+            <!-- Main Image -->
+            <div class="flex-grow-1">
+                <img id="mainImage" src="@Url.Content("~/image/Completesewingequipment1.png")" class="img-fluid mb-2" alt="Main Product Image" />
+            </div>
+
+            <!-- Thumbnail Images -->
+            <div class="d-flex flex-column justify-content-between">
+                <img src="@Url.Content("~/image/Completesewingequipment1.png")" class="img-thumbnail mb-4 thumbnail" alt="Thumbnail Image 1" style="width: 300px; height: auto; cursor: pointer;" />
+                <img src="@Url.Content("~/image/Completesewingequipment2.png")" class="img-thumbnail mb-4 thumbnail" alt="Thumbnail Image 2" style="width: 300px; height: auto; cursor: pointer;" />
+                <img src="@Url.Content("~/image/Completesewingequipment3.png")" class="img-thumbnail mb-4 thumbnail" alt="Thumbnail Image 3" style="width: 300px; height: auto; cursor: pointer;" />
+            </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="col-md-6">
+            <h1 class="mb-3">Complete Sewing Equipment</h1>
+            <p class="h4 text-danger">$13.00</p>
+            <p class="text-warning">★★★★★ (5.0)</p>
+            <p>Sewing machines, needles and threads, fabrics, scissors, measuring instruments, and sewing patterns. Complete sewing equipment.</p>
+            <a href="@Url.Action("card", "Home")" class="btn btn-warning btn-lg w-100 mb-3">Buy</a> 
+            <p><strong>SKU:</strong> N/A</p>
+            <p><strong>Categories:</strong> Business & Marketing</p>
+            <p><strong>Tags:</strong> Coaching, Education</p>
+        </div>
+    </div>
+
+    <!-- Related Products -->
+    <div class="row mt-4">
+        <div class="col-md-4 mb-4">
+            <a href="link-to-crystal-beads-page" class="card text-decoration-none text-dark">
+                <img src="~/image/CrystalBeads.png" class="card-img-top img-fluid" alt="Crystal Beads" />
+                <div class="card-body text-center">
+                    <h5 class="card-title">Crystal Beads</h5>
+                    <p class="card-text">$5.00 - $20.00</p>
+                    <p class="card-text">⭐⭐⭐⭐⭐</p>
+                </div>
+            </a>
+        </div>
+      
+        <div class="col-md-4 mb-4">
+            <a href="link-to-copper-wire-page" class="card text-decoration-none text-dark">
+                <img src="~/image/CopperWire.png" class="card-img-top img-fluid" alt="Copper Wire" />
+                <div class="card-body text-center">
+                    <h5 class="card-title">Copper Wire</h5>
+                    <p class="card-text">$15.00</p>
+                    <p class="card-text">⭐⭐⭐⭐</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 mb-4">
+            <a href="link-to-knitting-machine-page" class="card text-decoration-none text-dark">
+                <img src="~/image/KnittingMachine.png" class="card-img-top img-fluid" alt="Knitting Machine" />
+                <div class="card-body text-center">
+                    <h5 class="card-title">Knitting Machine</h5>
+                    <p class="card-text">$150.00</p>
+                    <p class="card-text">⭐⭐⭐⭐⭐</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.thumbnail').on('click', function () {
+            var src = $(this).attr('src');
+            $('#mainImage').attr('src', src);
+        });
+    });
+</script>

@@ -1,0 +1,95 @@
+﻿
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            }
+    </style>
+
+    <div class="container mt-4">
+        <h1 class="mb-4">Your Purchased Products</h1>
+        <div class="row">
+            <!-- Repeat this block for each purchased product -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="~/image/Completesewingequipment3.png" alt="Product Image" class="card-img-top"/>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">
+                            sewing machine
+                        </h5>
+                        <p class="card-text">Price: $19.99</p>
+                        <p class="card-text">Quantity: 1</p>
+                        <p class="card-text">⭐⭐⭐⭐</p>
+                        <!-- Button to complete the purchase -->
+                        <a href="@Url.Action("Payment", "Home")" class="btn btn-primary">Complete Purchase</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example of another purchased product -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="~/image/Ribbons,measuring,tape, and,scissors.png" class="card-img-top" alt="Product Image" />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">
+                            Sewing equipment
+                        </h5>
+                        <p class="card-text">Price: $29.99</p>
+                        <p class="card-text">Quantity: 2</p>
+                        <p class="card-text">⭐⭐⭐⭐⭐</p>
+                        <!-- Button to complete the purchase -->
+                        <a href="@Url.Action("Payment", "Home")" class="btn btn-primary">Complete Purchase</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Items and Total Price -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-info">
+                    <h4 class="alert-heading">Summary</h4>
+                    <p>Total Items: <span id="total-items">3</span></p>
+                    <p>Total Price: $<span id="total-price">59.97</span></p>
+                    <a href="@Url.Action("Payment", "Home")" class="btn btn-success">Complete Purchase</a>
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Completion Section -->
+       
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Example script to calculate total items and price
+        document.addEventListener('DOMContentLoaded', function () {
+            var totalItems = 0;
+            var totalPrice = 0;
+
+            // Iterate through each product card
+            document.querySelectorAll('.card').forEach(function (card) {
+                var quantity = parseInt(card.querySelector('.card-text').textContent.match(/Quantity: (\d+)/)[1]);
+                var price = parseFloat(card.querySelector('.card-text').textContent.match(/Price: \$([\d.]+)/)[1]);
+                totalItems += quantity;
+                totalPrice += price * quantity;
+            });
+
+            // Update the summary
+            document.getElementById('total-items').textContent = totalItems;
+            document.getElementById('total-price').textContent = totalPrice.toFixed(2);
+        });
+    </script>
+

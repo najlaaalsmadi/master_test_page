@@ -1,0 +1,101 @@
+﻿@{
+    ViewBag.Title = "Sewing Clothes Course";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+    .course-thumbnail {
+        width: 100%; /* Adjust as needed */
+        max-width: 600px; /* Adjust as needed */
+        height: auto;
+    }
+
+    .btn-group-center .btn {
+        margin: 0 auto;
+        display: block;
+    }
+  
+</style>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body text-center">
+                    <img src="https://img.youtube.com/vi/YOUR_VIDEO_ID/hqdefault.jpg" class="img-fluid rounded mb-3 course-thumbnail" alt="Course Thumbnail" id="img">
+                    <h2 class="card-title">Sewing Clothes Course with Certificate</h2>
+                </div>
+                <div class="card-body">
+                    <div class="btn-group-center">
+                        <a href="#img" class="btn btn-danger "><i class="fas fa-play-circle"></i> Click Here</a>
+                        <br />
+                        <a href="#card" class="btn btn-primary "><i class="fas fa-video"></i> Lessons</a>
+                        <br />
+                        <a href="#Questions" class="btn btn-secondary"><i class="fas fa-question-circle"></i> Questions & Comments</a>
+                        <br />
+                        <a href="#Reviews" class="btn btn-info"><i class="fas fa-comments"></i> Reviews</a>
+
+
+                    </div>
+                </div>
+                <div class="card-body d-flex justify-content-between">
+                    <button class="btn btn-outline-primary"><i class="fas fa-chevron-left"></i> Previous Lesson</button>
+                    <button class="btn btn-outline-primary"><i class="fas fa-chevron-right"></i> Next Lesson</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<div class="row" id="card">
+    @for (int i = 1; i <= 12; i++)
+    {
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <a href="@Url.Action("Lesson", "Home")" class="text-decoration-none text-dark">
+                <div class="card h-100">
+                    <img src="~/image/sewing-clothes.png" class="card-img-top" alt="Course Image">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Sewing Clothes</h5>
+                        <p class="card-text">Learn how to sew clothes professionally</p>
+                    </div>
+                    <div class="bg-primary text-white text-center rounded-circle position-absolute bottom-0 start-50 translate-middle-x" style="width: 30px; height: 30px;">
+                        @i
+                    </div>
+                </div>
+            </a>
+        </div>
+    }
+</div>
+
+<div class="container mt-4" id="Questions">
+    <div class="card">
+        <div class="card-body">
+            <form>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Write your comment...">
+                </div>
+                <button type="submit" style="background-color: #ffa500;">Post Comment</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="card mt-3" id="Reviews">
+        <div class="card-body">
+            <div class="d-flex justify-content-between">
+                <strong>ENG/ HISHAM HAMDAN AL-GHAITHI</strong>
+                <span class="text-muted">2 months ago</span>
+            </div>
+            <p class="mt-2">Good learning</p>
+            <div class="d-flex justify-content-end">
+                <button class="btn btn-outline-secondary btn-sm me-2">Like</button>
+                <button class="btn btn-outline-secondary btn-sm">Reply</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>

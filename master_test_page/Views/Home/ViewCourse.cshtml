@@ -1,0 +1,159 @@
+﻿@{
+    ViewBag.Title = "ViewCourse";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    body {
+        background-color: #1a1a1a;
+        color: #fff;
+    }
+
+    .course-container {
+        padding: 20px;
+    }
+
+    .course-details {
+        padding-left: 20px;
+    }
+
+        .course-details h2 {
+            font-weight: bold;
+        }
+
+        .course-details .rating {
+            color: #ffcc00;
+        }
+
+        .course-details p {
+            margin: 0;
+        }
+
+        .course-details .btn-primary {
+            background-color: #ffc107;
+            border: none;
+        }
+
+            .course-details .btn-primary:hover {
+                background-color: #e0a800;
+            }
+
+        .course-details i {
+            margin-right: 5px;
+        }
+
+    .video-thumbnail {
+        position: relative;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        background-color: #000;
+    }
+
+        .video-thumbnail img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-thumbnail .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 50px;
+            color: #fff;
+            opacity: 0.8;
+        }
+
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .card:hover {
+            transform: translateY(-10px); /* Moves the card up by 10px on hover */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow on hover */
+        }
+
+    .course-card {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .course-number {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #007bff;
+        color: white;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .course-title {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .card-body {
+        padding-bottom: 40px; /* Adjust if needed to make space for the number circle */
+    }
+</style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<br />
+<div class="container">
+    <div class="container course-container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="video-thumbnail">
+                    <img src="~/Content/Images/SewingClothes.png" alt="Course Thumbnail">
+                    <i class="fas fa-play-circle play-button"></i>
+                </div>
+            </div>
+            <div class="col-lg-6 course-details">
+                <h2>Sewing Clothes Course with Certificate</h2>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p><i class="fas fa-graduation-cap"></i> Category: Sewing Courses</p>
+                <p><i class="fas fa-book"></i> Number of Lessons: 12</p>
+                <p><i class="fas fa-certificate"></i>An accredited certificate upon completion of the course</p>
+                <a href="#" class="btn btn-primary"><i class="fas fa-play-circle"></i> Click here to watch the course introduction</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        @for (int i = 1; i <= 12; i++)
+        {
+            <div class="col-6 col-md-4 col-lg-3 course-card">
+                <a href="@Url.Action("Lesson", "Home")" class=" text-decoration-none text-dark">
+                    <div class="card">
+                        <img src="~/image/sewing-clothes.png" class="card-img-top" alt="Course Image" />
+                        <div class="card-body text-center">
+                            <p class="course-title">Sewing Clothes</p>
+                            <p>Learn how to sew clothes professionally</p>
+                        </div>
+                        <div class="course-number">@i</div>
+                    </div>
+            </div>
+        }
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>

@@ -1,0 +1,156 @@
+﻿@{
+    ViewBag.Title = "Payment";
+}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    .payment-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .payment-method, .order-summary {
+        margin-bottom: 20px;
+    }
+
+    .payment-content > div {
+        display: none;
+    }
+
+        .payment-content > div.active {
+            display: block;
+        }
+
+    .pin-input {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+        .pin-input input {
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+            .pin-input input:focus {
+                border-color: #007bff;
+                box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+            }
+</style>
+
+<div class="container payment-container">
+    <div class="row">
+        <div class="col-lg-3 payment-method">
+            <h2>Payment</h2>
+            <div class="form-check">
+                <input type="radio" id="card" name="paymentMethod" value="card" class="form-check-input" checked>
+                <label for="card" class="form-check-label">Card</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" id="transfer" name="paymentMethod" value="transfer" class="form-check-input">
+                <label for="transfer" class="form-check-label">Transfer</label>
+            </div>
+        </div>
+
+        <div class="col-lg-6 payment-content">
+            <div id="card-content" class="active">
+                <h3>Pay With Card</h3>
+                <form id="cardForm">
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number</label>
+                        <input type="text" id="cardNumber" class="form-control" placeholder="1234 5678 9012 1314">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="expiryDate">Expiration Date</label>
+                            <input type="text" id="expiryDate" class="form-control" placeholder="MM/YY">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" class="form-control" placeholder="123">
+                        </div>
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" id="saveCard" class="form-check-input">
+                        <label for="saveCard" class="form-check-label">Save card details</label>
+                    </div>
+                    <button type="button" class="btn btn-warning btn-block" id="payButton">Pay $59.28</button>
+                </form>
+                <div class="mt-4" id="pinEntry" style="display: none;">
+                    <h5>Enter your 4-digit card pin to confirm this payment</h5>
+                    <div class="pin-input">
+                        <input type="text" maxlength="1" class="form-control">
+                        <input type="text" maxlength="1" class="form-control">
+                        <input type="text" maxlength="1" class="form-control">
+                        <input type="text" maxlength="1" class="form-control">
+                    </div>
+                    <a class="btn btn-warning btn-block" href="@Url.Action("Paymentsuccess", "Home")">Confirm Payment</a>
+                </div>
+            </div>
+
+            <div id="transfer-content">
+                <h3>Pay With Transfer</h3>
+                <p>Transfer $59.28 to:</p>
+                <p>Palatus Bank</p>
+                <p><strong>0123456781</strong></p>
+                <p>Expires in <span id="expiry-time">19:00</span> minutes</p>
+                <a class="btn btn-warning btn-block" href="@Url.Action("Paymentsuccess", "Home")">Confirm Payment</a>
+            </div>
+        </div>
+
+        <div class="col-lg-3 order-summary">
+            <h2>Order Summary</h2>
+            <p>Tarmax Leather Bag</p>
+            <p>Brown Vegan Leather</p>
+            <p>Qty: 2</p>
+            <div class="input-group mb-3">
+                <input type="text" id="discountCode" class="form-control" placeholder="Gift or discount code">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button">Apply</button>
+                </div>
+            </div>
+            <p>Subtotal: $49.80</p>
+            <p>Shipping: $7.42</p>
+            <p>Total: $59.28</p>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const cardContent = document.getElementById('card-content');
+        const transferContent = document.getElementById('transfer-content');
+        const cardRadio = document.getElementById('card');
+        const transferRadio = document.getElementById('transfer');
+        const payButton = document.getElementById('payButton');
+        const pinEntry = document.getElementById('pinEntry');
+
+        cardRadio.addEventListener('change', function () {
+            if (this.checked) {
+                cardContent.classList.add('active');
+                transferContent.classList.remove('active');
+            }
+        });
+
+        transferRadio.addEventListener('change', function () {
+            if (this.checked) {
+                cardContent.classList.remove('active');
+                transferContent.classList.add('active');
+            }
+        });
+
+        payButton.addEventListener('click', function () {
+            pinEntry.style.display = 'block';
+        });
+    });
+</script>

@@ -3,6 +3,7 @@
 @{
     ViewBag.Title = "Student Login";
 }
+
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <div class="container">
@@ -10,6 +11,7 @@
         <h1>Student Login</h1>
         <ol class="breadcrumb">
             <li><a href="/">Home</a></li>
+            <li>&#10230;</li>
             <li class="active">Login</li>
         </ol>
 
@@ -33,7 +35,7 @@
                 <div class="form-group">
                     <a href="/Account/ForgotPassword">Forgot Password?</a>
                 </div>
-                <button type="submit" class="btn btn-primary">Sign In</button>
+                <button type="submit" class="btn btn-warning">Sign In</button>
             </form>
             <p>Don't have an account?  @Html.ActionLink("singup", "singup", "Home", new { area = "" }, new { @class = "nav-link" })</p>
            

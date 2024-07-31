@@ -1,0 +1,121 @@
+﻿@{
+    ViewBag.Title = "Handicrafts";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    // قائمة العناصر
+    var items = new List<(string title, string image, string price, string rating)>
+{
+        ("Pottery (صناعة الفخار)", "~/image/pottery.jpg", "$25.00", "⭐⭐⭐⭐"),
+        ("Hand Weaving (النسيج اليدوي)", "~/image/handweaving.jpg", "$30.00", "⭐⭐⭐⭐⭐"),
+        ("Knitting and Crocheting (الحياكة والكروشيه)", "~/image/knitting.jpg", "$15.00", "⭐⭐⭐"),
+        ("Handmade Jewelry (صنع المجوهرات اليدوية)", "~/image/jewelry.jpg", "$40.00", "⭐⭐⭐⭐⭐"),
+        ("Woodworking (تشكيل الخشب)", "~/image/woodworking.jpg", "$50.00", "⭐⭐⭐⭐"),
+        ("Thread and Embroidery Work (العمل بالخيوط والتطريز)", "~/image/embroidery.jpg", "$20.00", "⭐⭐⭐⭐⭐"),
+        ("Macramé Crafting (صناعة المكرميه)", "~/image/macrame.jpg", "$35.00", "⭐⭐⭐⭐"),
+        ("Macramé Decorations (توزيعات المكرميه)", "~/image/macrame_decoration.jpg", "$25.00", "⭐⭐⭐"),
+        ("Candle Making (صناعة الشمع)", "~/image/candlemaking.jpg", "$15.00", "⭐⭐⭐⭐"),
+        ("Soap Making (صناعة الصابون)", "~/image/soapmaking.jpg", "$10.00", "⭐⭐⭐⭐⭐")
+    };
+}
+
+<style>
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+</style>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<br />
+
+<div class="row">
+    <aside class="col-md-3 mb-4">
+        <div class="card mb-4">
+            <div class="card-header">Categories</div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><input type="checkbox"> All</li>
+                <li class="list-group-item"><input type="checkbox"> Handmade Arts  (6)</li>
+                <li class="list-group-item"><input type="checkbox" checked> Handicrafts (10)</li>
+                <li class="list-group-item"><input type="checkbox"> Fashion & Styling  (5)</li>
+                <li class="list-group-item"><input type="checkbox"> Tech Repair  (5)</li>
+                <li class="list-group-item"><input type="checkbox"> Visual Arts  (6)</li>
+                <li class="list-group-item"><input type="checkbox"> Beauty & Makeup   (5)</li>
+                <li class="list-group-item"><input type="checkbox"> Culinary Arts  (5)</li>
+                <li class="list-group-item"><input type="checkbox">  Home & Garden  (5)</li>
+            </ul>
+        </div>
+        <div class="card mb-4">
+            <div class="card-header">Language</div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><input type="checkbox"> Spanish (10)</li>
+                <li class="list-group-item"><input type="checkbox"> English (10)</li>
+            </ul>
+        </div>
+        <div class="card mb-4">
+            <div class="card-header">Price</div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><input type="radio" name="price"> Under $10</li>
+                <li class="list-group-item"><input type="radio" name="price"> $10 - $50</li>
+            </ul>
+        </div>
+        <div class="card">
+            <div class="card-header">Ratings</div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><input type="checkbox"> <span>⭐⭐⭐⭐⭐</span> (3)</li>
+                <li class="list-group-item"><input type="checkbox"> <span>⭐⭐⭐⭐</span> (2)</li>
+                <li class="list-group-item"><input type="checkbox"> <span>⭐⭐⭐</span> (2)</li>
+                <li class="list-group-item"><input type="checkbox"> <span>⭐⭐</span> (1)</li>
+                <li class="list-group-item"><input type="checkbox"> <span>⭐</span> (1)</li>
+            </ul>
+        </div>
+    </aside>
+  
+
+    <section class="col-md-9">
+        <div class="row">
+            @foreach (var item in items)
+            {
+                <div class="col-md-4 mb-4">
+                    <a href="@Url.Action("ShopDetails", "Home")" class="card text-decoration-none text-dark">
+                        <img src="@item.image" class="card-img-top" alt="@item.title" />
+                        <div class="card-body text-center">
+                            <h5 class="card-title">@item.title</h5>
+                            <p class="card-text">@item.price</p>
+                            <p class="card-text">@item.rating</p>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link bg-warning text-white" href="#" tabindex="-1">&laquo;</a>
+                </li>
+                <li class="page-item active">
+                    <a class="page-link bg-warning text-white border-warning" href="#">1</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link bg-warning text-white border-warning" href="#">2</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link bg-warning text-white border-warning" href="#">3</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link bg-warning text-white" href="#">&raquo;</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

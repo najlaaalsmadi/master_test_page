@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "Paymentsuccess";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+   
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<style>
+    body {
+        background-color: #f5f5f5;
+        font-family: Arial, sans-serif;
+    }
+
+    .confirmation-container {
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+        .confirmation-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .confirmation-container p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .confirmation-container .order-number {
+            font-size: 22px;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        .confirmation-container .btn-track-order {
+            background-color: #ff9800;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+
+            .confirmation-container .btn-track-order:hover {
+                background-color: #e68900;
+            }
+
+        .confirmation-container .btn-generate-receipt {
+            background-color: #ddd;
+            color: #888;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: not-allowed;
+            margin: 10px 0;
+        }
+</style>
+
+<div class="confirmation-container">
+    <h2>Thank You For Your Purchase</h2>
+    <p>Order #123RGR231567Y Confirmed</p>
+    <button class="btn-track-order">Track Order</button>
+    <button class="btn-generate-receipt" disabled>Generate Receipt</button>
+</div>
+

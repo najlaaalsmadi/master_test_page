@@ -120,6 +120,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\adminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -146,6 +147,44 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="image\aboutimg.png" />
+    <Content Include="image\blog1.jpg" />
+    <Content Include="image\blog2.jpg" />
+    <Content Include="image\blog3.jpg" />
+    <Content Include="image\blog4.jpg" />
+    <Content Include="image\blog5.jpg" />
+    <Content Include="image\blog6.jpg" />
+    <Content Include="image\carpentry.png" />
+    <Content Include="image\Complete sewing equipment1.png" />
+    <Content Include="image\Complete sewing equipment2.png" />
+    <Content Include="image\Complete sewing equipment3.png" />
+    <Content Include="image\Completesewingequipment1.png" />
+    <Content Include="image\Completesewingequipment2.png" />
+    <Content Include="image\Completesewingequipment3.png" />
+    <Content Include="image\CopperWire.png" />
+    <Content Include="image\CrystalBeads.png" />
+    <Content Include="image\Fashion Design.png" />
+    <Content Include="image\fashion-design.png" />
+    <Content Include="image\imghome1.png" />
+    <Content Include="image\inner_about.png" />
+    <Content Include="image\instructor1.png" />
+    <Content Include="image\instructor2.png" />
+    <Content Include="image\instructor3.png" />
+    <Content Include="image\instructor4.png" />
+    <Content Include="image\instructor5.png" />
+    <Content Include="image\instructor6.png" />
+    <Content Include="image\instructor7.png" />
+    <Content Include="image\instructor8.png" />
+    <Content Include="image\instructor9.png" />
+    <Content Include="image\KnittingMachine.png" />
+    <Content Include="image\Makeup Artistry Vending Equipment.png" />
+    <Content Include="image\Men%27sTeddy.jpg" />
+    <Content Include="image\Pink Brush Feminine  Logo %284%29.png" />
+    <Content Include="image\Resin Crafting Complete Equipment.jpg" />
+    <Content Include="image\Ribbons,measuring,tape, and,scissors.png" />
+    <Content Include="image\sewing-clothes.png" />
+    <Content Include="image\Soap making complete equipment.png" />
+    <Content Include="image\نجلاء.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -163,6 +202,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Views\style\StyleSheethome.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -181,6 +221,25 @@
     <Content Include="Views\Home\singup.cshtml" />
     <Content Include="Views\Home\Courses.cshtml" />
     <Content Include="Views\Home\shop.cshtml" />
+    <Content Include="Views\Home\CourseDetails.cshtml" />
+    <Content Include="Views\Home\AllEvents.cshtml" />
+    <Content Include="Views\Home\EventsDetails.cshtml" />
+    <Content Include="Views\Home\Rental.cshtml" />
+    <Content Include="Views\Home\shopdetails.cshtml" />
+    <Content Include="Views\Shared\_LayoutPage1.cshtml" />
+    <Content Include="Views\Home\page404.cshtml" />
+    <Content Include="Views\Home\InstructorsDetails.cshtml" />
+    <Content Include="Views\Home\profile.cshtml" />
+    <Content Include="Views\Home\card.cshtml" />
+    <Content Include="Views\Home\ViewCourse.cshtml" />
+    <Content Include="Views\Home\Lesson.cshtml" />
+    <Content Include="Views\Home\Handicrafts.cshtml" />
+    <Content Include="Views\Home\AllInstructors.cshtml" />
+    <Content Include="Views\Home\Payment.cshtml" />
+    <Content Include="Views\Home\Paymentsuccess.cshtml" />
+    <Content Include="Views\admin\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutPage2.cshtml" />
+    <Content Include="Views\admin\Charts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,157 @@
+﻿@{
+    ViewBag.Title = "AllEvents";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .card:hover {
+            transform: translateY(-10px); /* Moves the card up by 10px on hover */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow on hover */
+        }
+
+    .event-card {
+        margin-bottom: 20px;
+    }
+
+    .event-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .event-title {
+        font-size: 16px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    .event-date {
+        font-size: 14px;
+        color: #ffa500;
+    }
+</style>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<br />
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="@Url.Action("Index", "Home")">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">All Events</li>
+</ol>
+
+<section class="news-feed py-5">
+    <div class="container">
+        <h2 class="mb-4">Our Latest News Feed</h2>
+        <p class="mb-4">When an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 event-card">
+                <a href="@Url.Action("EventsDetails", "Home")" class="card text-decoration-none text-dark">
+                    <div class="card">
+                        <img src="~/image/blog5.jpg" class="card-img-top event-img" alt="Event 1">
+                        <div class="card-body">
+                            <div class="event-date">25 June, 2024</div>
+                            <div class="event-title">Smart Device Repair Seminar with Industry Professionals</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6 event-card">
+                <a href="@Url.Action("EventsDetails", "Home")" class="card text-decoration-none text-dark">
+                    <div class="card">
+                        <img src="~/image/blog4.jpg" class="card-img-top event-img" alt="Event 2">
+                        <div class="card-body">
+                            <div class="event-date">25 June, 2024</div>
+                            <div class="event-title">Awe: Creating Futures Through Technology</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6 event-card">
+                <a href="@Url.Action("EventsDetails", "Home")" class="card text-decoration-none text-dark">
+                    <div class="card">
+                        <img src="~/image/blog3.jpg" class="card-img-top event-img" alt="Event 3">
+                        <div class="card-body">
+                            <div class="event-date">25 June, 2024</div>
+                            <div class="event-title">Exactly How Technology Can Make Reading</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6 event-card">
+                <a href="@Url.Action("EventsDetails", "Home")" class="card text-decoration-none text-dark">
+                    <div class="card">
+                        <img src="~/image/blog6.jpg" class="card-img-top event-img" alt="Event 4">
+                        <div class="card-body">
+                            <div class="event-date">25 June, 2024</div>
+                            <div class="event-title">Learning JavaScript With Imagination</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6 event-card">
+                <a href="@Url.Action("EventsDetails", "Home")" class="card text-decoration-none text-dark">
+                    <div class="card">
+                        <img src="~/image/blog2.jpg" class="card-img-top event-img" alt="Event 5">
+                        <div class="card-body">
+                            <div class="event-date">25 June, 2024</div>
+                            <div class="event-title">Make Your Magnificent May 2023 Edition</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6 event-card">
+                <a href="@Url.Action("EventsDetails", "Home")" class="card text-decoration-none text-dark">
+                    <div class="card">
+                        <img src="~/image/blog1.jpg" class="card-img-top event-img" alt="Event 6">
+                        <div class="card-body">
+                            <div class="event-date">25 June, 2024</div>
+                            <div class="event-title">Accessible Target Sizes Cheatsheet</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6 event-card">
+                <a href="@Url.Action("EventsDetails", "Home")" class="card text-decoration-none text-dark">
+                    <div class="card">
+                        <img src="~/image/blog3.jpg" class="card-img-top event-img" alt="Event 7">
+                        <div class="card-body">
+                            <div class="event-date">25 June, 2024</div>
+                            <div class="event-title">Color mechanics that he came up with during</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6 event-card">
+                <a href="@Url.Action("EventsDetails", "Home")" class="card text-decoration-none text-dark">
+                    <div class="card">
+                        <img src="~/image/blog1.jpg" class="card-img-top event-img" alt="Event 8" />
+                        <div class="card-body">
+                            <div class="event-date">25 June, 2024</div>
+                            <div class="event-title">How To Design Effective User Onboarding</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row justify-content-sm-center">
+            <div class="col-12 text-center">
+                <nav>
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
